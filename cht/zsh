@@ -1,0 +1,25 @@
+
+# ---------------------------------
+# folder where to place completion scripts
+~/.zsh/completions
+
+# ---------------------------------
+# git shortcuts oh-my-zsh
+[link](https://github.com/ohmyzsh/ohmyzsh/wiki/Cheatsheet)
+ga	git add
+gaa	git add --all
+
+gcam	git commit -a -m
+
+gl	git pull
+ggl	git pull origin $(current_branch)
+
+gp	git push
+ggp	git push origin $(current_branch)
+
+glog	git log --oneline --decorate --graph
+glo	git log --oneline --decorate
+
+# ---------------------------------
+# reload shell without quitting
+exec "$SHELL"

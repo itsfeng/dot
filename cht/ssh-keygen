@@ -1,0 +1,4 @@
+
+# ---------------------------------
+# Create key with output file, type and comment specified
+ssh-keygen -f ~/.ssh/id-put-gdev2 -t ed25519 -C "put-ssh@gdev2"

@@ -1,0 +1,4 @@
+
+# ---------------------------------
+# make journalctl useful:
+export SYSTEMD_LESS="FRXMK"

@@ -1,0 +1,31 @@
+
+# ---------------------------------
+# Check if NFS Server is alive
+ping KAFPINALX0001.ka.de.dm-drogeriemarkt.com
+
+# ---------------------------------
+# Check if client has the correct DNS info
+getent KAFPINALX0001.ka.de.dm-drogeriemarkt.com
+
+# ---------------------------------
+# Check if the NFS services are started on the NFS server
+rpcinfo -s KAFPINALX0001.ka.de.dm-drogeriemarkt.com|egrep 'nfs|mountd'
+
+# ---------------------------------
+# Check if the servers nfsd services are responding
+rpcinfo -u KAFPINALX0001.ka.de.dm-drogeriemarkt.com nfs
+
+# ---------------------------------
+# Check if the servers mountd service is responding
+rpcinfo -u KAFPINALX0001.ka.de.dm-drogeriemarkt.com mountd
+
+# ---------------------------------
+# verify the mount exports on the server
+showmount -e KAFPINALX0001.ka.de.dm-drogeriemarkt.com
+
+# ---------------------------------
+# show disk i/o stats
+iostat -x
+nfsiostat
+nfsstat
+nfsstat [-m|-l]

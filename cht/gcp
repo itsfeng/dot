@@ -1,0 +1,12 @@
+
+# ---------------------------------
+# Add ssh key to gcloud instance
+gcloud compute instances add-metadata pds-privatebin --metadata enable-oslogin=TRUE
+gcloud compute instances add-metadata pds-privatebin --metadata-from-file ssh-keys=/Users/d0292408/.ssh/id_dmtech.pub
+
+# ---------------------------------
+# copy files from gcp bucket to gcp instance
+`
+#! /bin/bash
+toolbox --bind=/home/username/bucket-folder:/my-bucket <<< "gsutil cp -r /my-bucket/* gs://my-bucket
+`

@@ -1,0 +1,13 @@
+
+# ---------------------------------
+# iso usb dd
+sudo fdisk -l
+// note drive
+
+sudo mkfs.vfat -n usbdrive -I /dev/sdX
+sudo umount /dev/sdX
+sudo dd if=/path/to/XXX.iso of=/dev/sdX bs=1M && sync
+
+# ---------------------------------
+# quickly fill harddisk
+fallocate -l 10G filename

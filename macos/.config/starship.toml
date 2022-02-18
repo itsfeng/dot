@@ -1,0 +1,68 @@
+format = """
+$username\
+$time\
+$directory\
+$character\
+${custom.vpn}\
+$aws\
+$gcloud\
+$git_branch\
+$git_commit\
+$git_state\
+$git_status\
+$terraform\
+$python\
+\n$character
+"""
+
+[time]
+disabled = false
+format = '[\[ $time \]]($style) '
+time_format = "%T"
+utc_time_offset = "+2"
+
+[character]
+success_symbol = "[❯](bold green)"
+error_symbol = "[❯](bold red)"
+vicmd_symbol = "[❮](bold green)"
+
+[directory]
+fish_style_pwd_dir_length = 2
+truncation_length = 1
+truncate_to_repo = true
+style = "bold cyan"
+read_only = "🔒"
+read_only_style	= "red"
+truncation_symbol = "..."
+
+[git_branch]
+style = "bold white"
+
+[aws]
+symbol = "🅰 "
+format = "[$symbol]($style) "
+style = "bold yellow"
+
+[gcloud]
+symbol = "🅶 "
+format = "[$symbol$active]($style) "
+style = "bold blue"
+
+[custom.vpn]
+symbol = "🆅 "
+format = "[$symbol]($style) "
+style = "bold red"
+shell = ["zsh", "-d", "-f"]
+when = 'ifconfig utun2'
+command = "pwd"
+
+[terraform]
+format = "@ [$symbol$workspace]($style) "
+symbol = "🆃 🅵 "
+style = "bold 105"
+
+[python]
+python_binary = "python3"
+detect_extensions = "py"
+detect_files = ["Pipfile", "__init__.py", "requirements.txt"]
+

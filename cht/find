@@ -1,0 +1,4 @@
+
+# ---------------------------------
+# find files and delete them
+find . -name ".DS_Store" -exec rm -rf {} \;

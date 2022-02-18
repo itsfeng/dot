@@ -1,0 +1,4 @@
+
+# ---------------------------------
+# display output on the console and in a file
+SomeCommand 2>&1 | tee SomeFile.txt

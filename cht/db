@@ -1,0 +1,28 @@
+
+# ---------------------------------
+# DB Connections / Rev Proxy
+# List of SSH Tunnel Database Connections
+
+# ---------------------------------
+# Jira Dev
+s -L 1433:SQLE053D.dm-drogeriemarkt.com:2778 jd
+
+# ---------------------------------
+# Jira Prod
+s -L 1433:SQLP053D.dm-drogeriemarkt.com:2778 j
+
+# ---------------------------------
+# Bitbucket Dev
+s -L 1433:SQLE018C.dm-drogeriemarkt.com:3644 bd
+
+# ---------------------------------
+# Bitbucket Prod
+s -L 1433:SQLP018C.dm-drogeriemarkt.com:3644 b
+
+# ---------------------------------
+# Wiki Dev
+s -L 1433:SQLE007C.dm-drogeriemarkt.com:2778 wd
+
+# ---------------------------------
+# Wiki Prod
+s -L 1433:SQLP007C.dm-drogeriemarkt.com:2778 w

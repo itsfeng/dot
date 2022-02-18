@@ -1,0 +1,16 @@
+
+# ---------------------------------
+# Elastic Search ReIndex
+# [https://docs.gitlab.com/ee/integration/elasticsearch.html#gitlab-elasticsearch-rake-tasks]
+
+gitlab-rake gitlab:elastic:create_empty_index
+gitlab-rake gitlab:elastic:clear_index_status
+gitlab-rake gitlab:elastic:index_projects
+
+# or index in batches
+sudo gitlab-rake gitlab:elastic:index_projects ID_FROM=1001 ID_TO=2000
+sudo gitlab-rake gitlab:elastic:index_projects UPDATE_INDEX=true ID_TO=1000
+
+gitlab-rake gitlab:elastic:index_snippets
+gitlab-rake gitlab:elastic:index_projects_status
+gitlab-rake gitlab:elastic:projects_not_indexed

@@ -1,0 +1,6 @@
+
+# ---------------------------------
+# fix bash: warning: setlocale: LC_ALL: cannot change locale (en_US.UTF-8)
+apt install locales
+echo "en_US.UTF-8 UTF-8" > /etc/locale.gen
+locale-gen

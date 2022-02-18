@@ -1,0 +1,4 @@
+
+# ---------------------------------w
+# Uninstall all pip packages
+pip freeze | xargs pip uninstall -y

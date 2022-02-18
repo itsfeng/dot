@@ -1,0 +1,43 @@
+
+# ---------------------------------
+# disable line numbering
+:set rnu!
+:set nu!
+
+# ---------------------------------
+# folding / toggle / open / close
+za
+zo
+zc
+
+# ---------------------------------
+# fold till the end of next code block
+zf}a
+
+# ---------------------------------
+# delete fold
+zd
+
+# ---------------------------------
+# recursively delete all folds
+zD
+
+# ---------------------------------
+# movement
+w    - forward a word
+e    - forward to the end of next word
+b    - backward a word
+
+f{char}    - move to the next occurrence of {char} within the current line
+%          -  move to the next or previous related item
+
+H    - High
+M    - Mid
+L    - Low
+
+ctrl-d    - down a screen
+ctrl-u    - up a screen
+
+zz   - move current line to the middle of the screen
+zt   - move current line to the top of the screen
+zb   - move current line to the bottom of the screen

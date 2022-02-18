@@ -1,0 +1,8 @@
+
+# ---------------------------------w
+# netcat as telnet replacement to query for open port
+nc -zv 192.168.1.15 22
+nc -zv 192.168.56.10 20-80
+
+`-z` – sets nc to simply scan for listening daemons, without actually sending any data to them.  
+`-v` – enables verbose mode.

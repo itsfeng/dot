@@ -1,0 +1,4 @@
+
+# ---------------------------------
+# Copy all files - including hidden ones
+cp -r /etc/skel /home/user

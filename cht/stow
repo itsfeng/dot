@@ -1,0 +1,4 @@
+
+# ---------------------------------
+# stow usage
+stow -d ~/Gits/dotfiles/ -t ~ termux

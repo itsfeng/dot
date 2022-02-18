@@ -1,0 +1,4 @@
+
+# ---------------------------------
+# list attributes of group
+ldapsearch -x -H "ldaps://ad.dm-drogeriemarkt.com" -D "d0292408@dm.int" -w "$LDAPPW" -b "OU=dm,DC=dm,DC=int" "CN=SecXX-Artifactory-AllUsers" -s sub "(objectClass=group)"

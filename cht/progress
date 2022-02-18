@@ -1,0 +1,8 @@
+
+# ---------------------------------
+# stopwatch
+while true; do echo -ne "`date`\r"; done
+
+# ---------------------------------
+# countdown
+for i in `seq 600 -1 1` ; do echo -ne "\r$i " ; sleep 1 ; done

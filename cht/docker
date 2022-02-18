@@ -1,0 +1,51 @@
+
+# ---------------------------------
+# Login to custom registry
+docker login registry.gitlabdev.dm-drogeriemarkt.com
+
+# ---------------------------------
+# Build image with tag
+docker image build -t registry.gitlabdev.dm-drogeriemarkt.com/d0292408/super-test/hw-20191125
+
+# ---------------------------------
+# Tag existing image for use in custom registry
+docker tag 7f335821efb5 artifactory-dev.dm-drogeriemarkt.com:9090/pds-test/pds-amazonlinux:1.0.0
+
+# ---------------------------------
+# Push to custom regsitry
+docker push registry.gitlabdev.dm-drogeriemarkt.com/d0292408/super-test/hw-20191125
+
+# ---------------------------------
+# Login to Docker Machine
+docker-machine ssh %imagename%
+
+# ---------------------------------
+# Start new interactive Container from Image
+docker run -it --entrypoint bash amazon/aws-cli:latest
+
+# ---------------------------------
+# Enter Running Docker Container
+docker exec -it [container-id] bash
+
+# ---------------------------------
+# Update a docker container to the latest version
+[https://ma.ttias.be/update-docker-container-latest-version/](https://ma.ttias.be/update-docker-container-latest-version/)
+docker-compose pull
+docker-compose restart
+
+# ---------------------------------
+# Download newest version of container:
+docker pull nginx:alpine
+
+# ---------------------------------
+# Re-create the running service [HTTP/2 nginx container](https://ma.ttias.be/run-nginx-proxy-docker-container-http2/) like this:
+docker stop nginx-container
+docker rm nginx-container
+docker run --name nginx-container \ 
+    --net="host" \
+    -v /etc/nginx/:/etc/nginx/ \
+    -v /etc/ssl/certs/:/etc/ssl/certs/ \
+    -v /etc/letsencrypt/:/etc/letsencrypt/ \
+    -v /var/log/nginx/:/var/log/nginx/ \
+    --restart=always \
+    -d nginx:alpine

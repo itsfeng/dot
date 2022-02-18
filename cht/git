@@ -1,0 +1,62 @@
+
+# ---------------------------------
+# Ignore all git settings
+HOME= git pull
+HOME= git clone
+
+# ---------------------------------
+# Ignore ssh config file
+GIT_SSH_COMMAND="ssh -F /dev/null -o StrictHostKeyChecking=no" git clone git@gitlab.dm-drogeriemarkt.com:pds/sil/silprograms.git
+# git config - verbose, no host checking & use specific ssh key for authentication
+git config --global core.sshCommand "ssh -vvv -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -o "IdentitiesOnly=yes" -i ~/.ssh/id-put-gdev"
+
+# ---------------------------------
+# Setting your branch to exactly match the remote branch can be done in two steps:
+git fetch origin
+git reset --hard origin/master
+
+# ---------------------------------
+# save local modifications
+git stash
+# apply local modifications
+git stash pop
+#or
+git stash apply
+# git stash pop throws away the (topmost, by default) stash after applying it, whereas git stash apply leaves it in the stash list for possible later reuse (or you can then git stash drop it).
+
+# ---------------------------------
+# remove unstaged changes
+git restore .
+
+# ---------------------------------
+# new branch, take changes with you
+git checkout -b <name>
+
+# ---------------------------------
+# list branches
+git branch -v
+
+# ---------------------------------
+# make file executable
+chmod -x <file>
+git update-index --chmod=+x <file>
+chmod +x <file>
+git commit -m 'commit'
+
+# ---------------------------------
+# rebase branch
+git fetch origin
+git checkout $branch
+git rebase origin/master
+
+# ---------------------------------
+# git `credential.helper` is set to `osxkeychain` by default, this lead to 403s
+# after updating to GitLab 14.6.3
+# fix unset helper:
+git config --system --unset credential.helper
+# or persist in .gitconfig
+```
+[credential]
+        helper =
+```
+

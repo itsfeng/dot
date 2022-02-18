@@ -1,0 +1,4 @@
+
+# ---------------------------------
+# calculate percentage diff
+=(new_value-old_value)/old_value

@@ -1,0 +1,38 @@
+format = """
+$directory\
+$character\
+$aws\
+$gcloud\
+$git_branch\
+$git_commit\
+$git_state\
+$git_status"""
+
+[directory]
+format = "🐉 [$path]($bold yellow) "
+fish_style_pwd_dir_length = 2
+truncation_length = 2
+truncate_to_repo = true
+style = "bold cyan"
+read_only = "🔒"
+read_only_style	= "red"
+truncation_symbol = "..."
+
+[character]
+success_symbol = "[❯](bold green)"
+error_symbol = "[❯](bold red)"
+vicmd_symbol = "[❮](bold green)"
+
+[git_branch]
+style = "bold white"
+
+[aws]
+symbol = "🅰 "
+format = "[$symbol]($style) "
+style = "bold yellow"
+
+
+[gcloud]
+symbol = "🅶 "
+format = "[$symbol$active]($style) "
+style = "bold blue"

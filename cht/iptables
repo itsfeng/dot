@@ -1,0 +1,17 @@
+
+# ---------------------------------
+# Documentation
+https://www.digitalocean.com/community/tutorials/how-to-list-and-delete-iptables-firewall-rules
+
+# ---------------------------------
+# Block Port 5432
+iptables -A OUTPUT -p tcp --dport 5432 -j DROP
+
+# ---------------------------------
+# List iptables
+iptables -S
+iptables -L --line-numbers
+
+# ---------------------------------
+# Delete rule
+iptables -D OUTPUT 1

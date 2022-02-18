@@ -1,0 +1,12 @@
+#!/bin/sh
+
+# Set volume to 0%
+#amixer -q sset Master 0% &
+
+# Launch terminal
+#xfce4-terminal &
+#urxvt &
+xfce4-terminal
+
+# Launch Insync
+#insync-headless &

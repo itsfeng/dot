@@ -1,0 +1,5 @@
+
+# ---------------------------------
+# test checksum
+echo "ee00612392fa7bdee1e6edc0c54c873b48e3a2f572a4220459654b35802f0b99 jfrog-artifactory-pro-6.14.1.zip" | sha256sum -c
+echo "$(cat archive.tar.gz.sha256) archive.tar.gz" | sha256sum --check --status

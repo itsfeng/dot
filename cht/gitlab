@@ -1,0 +1,16 @@
+# emergency support
+mail to:
+emergency@gitlab.com
+
+
+# -----------------
+## Rails Cheatsheets
+[official](https://docs.gitlab.com/ee/administration/troubleshooting/gitlab_rails_cheat_sheet.html)
+[internal](https://wiki.dm-drogeriemarkt.com/pages/viewpage.action?pageId=190975235)
+
+
+# -----------------
+# Gitlab Rails Console
+gitlab-rails console
+
+

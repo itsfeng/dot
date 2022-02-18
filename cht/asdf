@@ -1,0 +1,16 @@
+
+# ---------------------------------
+# list current active versions
+asdf current
+
+# ---------------------------------
+# list available versions for python
+asdf list all python
+
+# ---------------------------------
+# install version of python
+asdf install python 3.9.0
+
+# ---------------------------------
+# activate version
+asdf [global|shell|local] python 3.9.0

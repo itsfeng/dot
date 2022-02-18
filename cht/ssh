@@ -1,0 +1,25 @@
+
+# ---------------------------------
+# ssh use identity / ignore agents keys
+ssh -o IdentitiesOnly=yes -i "dmTECH.pem" ec2-user@ec2-52-57-163-184.eu-central-1.compute.amazonaws.com
+
+# ---------------------------------
+# ssh use password / ignore agent
+ssh -o PreferredAuthentications=password -o PubkeyAuthentication=no user@host.io
+
+# ---------------------------------
+# ignore known-hosts file
+ssh -o StrictHostKeyChecking=no user@host.io
+
+# ---------------------------------
+# test ssh on local machine
+/usr/sbin/sshd -d
+optional '-p 2222'
+
+# ---------------------------------
+# ssh tunnel home to fritzbox
+ssh taikapi@e7n.org -p 44022 -L 2000:192.168.178.1:80
+
+# ---------------------------------
+# sshd config
+see sshd

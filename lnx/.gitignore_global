@@ -1,0 +1,9 @@
+# exclude everything
+macos/.vim/autoload/*
+macos/.vim/plugged/*
+termux/.vim/*
+termux/.ssh/*
+
+# exception to the rule
+!macos/.vim/autoload/plug.vim
+!macos/.ssh/config

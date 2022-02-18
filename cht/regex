@@ -1,0 +1,16 @@
+
+# ---------------------------------
+# get empty lines
+^(\s)*$\n
+
+# ---------------------------------
+# empty lines vscode msdn
+(?:(?=[^\r\n])\s)
+
+# ---------------------------------
+# match ip addresses
+^(?:[0-9]{1,3}\.){3}[0-9]{1,3}$
+
+# ---------------------------------
+# transform list of mail addresses copied from outlook
+egrep -o "([a-zA-Z0-9+._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z0-9_-]+)"

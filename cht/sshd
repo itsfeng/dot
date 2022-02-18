@@ -1,0 +1,16 @@
+
+# ---------------------------------
+# Limit SSH Functionality, so no Root Login is possible user can only login via Certificate
+# Copy SSH Identity to Server & verify Cert-based Login is working
+sudo vim /etc/ssh/sshd_config
+
+# ---------------------------------
+# Add or uncomment the following Options
+PermitRootLogin no
+PubkeyAuthentication yes
+PasswordAuthentication no
+ChallengeResponseAuthentication no
+
+# ---------------------------------
+# Restart SSHD Service
+sudo systemctl restart sshd.service

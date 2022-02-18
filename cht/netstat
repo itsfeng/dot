@@ -1,0 +1,8 @@
+
+# ---------------------------------
+# netstat routing / show routing table
+netstat -rn
+
+# ---------------------------------
+# packetloss measuring
+netstat -e -s

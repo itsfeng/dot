@@ -1,0 +1,19 @@
+
+# ---------------------------------
+# show all versions of package
+yum --showduplicates list <package>
+
+# ---------------------------------
+# Show all installed packages
+yum list installed
+
+# ---------------------------------
+# Clear yum cache
+yum clean all
+
+# ---------------------------------
+# Detailed info about installed package & update history
+yum info $package
+yum history list
+yum history info $updateID
+

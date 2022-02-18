@@ -1,0 +1,31 @@
+
+# ---------------------------------
+# detach from local session
+ctrl+b d
+
+# ---------------------------------
+# detach from remote session
+ctrl+b ctrl+b d
+
+# ---------------------------------
+# tmux session mgmt
+tmux new -s myname
+tmux ls
+tmux at -t myname
+
+# ---------------------------------
+# default prefix
+ctrl+b
+
+# ---------------------------------
+# split in tmux
+%  horizontal split
+"  vertical split
+
+# ---------------------------------
+# additional cmds
+z  focus pane
+o  swap panes
+q  show pane numbers
+x  kill pane
+⍽  space - toggle between layouts

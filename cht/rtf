@@ -1,0 +1,36 @@
+# ---------------------------------
+# Download Artifact from (maven) Repo using curl
+curl -sSf -u "d0292408:API-TOKEN" \
+-O 'https://rtf-dev.dm-drogeriemarkt.com:443/artifactory/maven-central-remote/log4j/log4j/1.1.3/log4j-1.1.3.jar'
+
+# find maven central path: 
+# https://mvnrepository.com/artifact/log4j/log4j/1.1.3
+# copy path of version number
+
+# ---------------------------------
+# Artifactory rsync command
+nohup rsync -avuz --info=progress2 --log-file=/home/admin-d0292408/rsync.log /srv/arti_prod_source/.snapshot/daily.2019-04-17_0010/ /srv/arti_dev_02_target/ &
+
+# ---------------------------------
+# RTF Audit Log
+# Link to Audit Log Documentation:
+[link](https://www.jfrog.com/confluence/display/JFROG/Audit+Trail+Log)
+
+# ---------------------------------
+# Audit log location
+/srv/artifactory/artifactory/access/logs/security.audit.log
+
+# ---------------------------------
+# Explanation of JSON Output:
+Date | User IP | User | Logged Principal | Entity Name | Event Type | Event | Data Changed
+
+Data Changed
+A JSON describing the data that was changed
+
+The following describes a map that specifies permissions when creating or updating a permission target:
+
+r = Read
+t = Annotate
+w = Deploy/Cache
+d = Delete/Overwrite
+m = Manage

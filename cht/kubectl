@@ -1,0 +1,8 @@
+
+# ---------------------------------
+# get aws eks config
+aws eks --region region update-kubeconfig --name cluster_name
+
+# ---------------------------------
+# print deployment
+kubectl get deploy deploymentname -o yaml

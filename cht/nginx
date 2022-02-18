@@ -1,0 +1,11 @@
+
+# ---------------------------------
+# nginx test config
+nginx -t
+
+# ---------------------------------
+# Nginx Rewrite Rule Config
+[link](https://serverfault.com/questions/302509/how-to-quick-and-easy-remove-part-of-an-url-in-nginx-with-httprewritemodule)
+
+rewrite `example.com/component/tag/whatever` to `example.com/tag/whatever`
+rewrite ^/component(.*)$ $1 last;

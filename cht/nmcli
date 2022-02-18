@@ -1,0 +1,16 @@
+
+# ---------------------------------
+#List Devices
+nmcli radio
+nmcli dev
+
+# ---------------------------------
+# Scan for SSIDs
+nmcli dev wifi rescan
+nmcli dev wifi list
+
+# ---------------------------------
+# Connect
+nmcli dev wifi con <SSID>
+nmcli dev wifi con <SSID> password <Password>
+nmcli --ask dev wifi con <SSID> 

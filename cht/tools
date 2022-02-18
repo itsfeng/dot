@@ -1,0 +1,11 @@
+
+# ---------------------------------
+# Testssl
+# Run local tests against a Webserver and test functionality
+[https://github.com/drwetter/testssl.sh](https://github.com/drwetter/testssl.sh)
+
+# Installation
+brew install testssl
+
+# Usage
+testssl.sh server:port

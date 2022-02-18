@@ -1,0 +1,5 @@
+
+# ---------------------------------
+# Docker Machine Instances sind nicht per AWSSSH oder direktem SSH erreichbar
+# Weg: via SSH auf den Docker Manager und dort via 
+docker-machine ssh %imagename%

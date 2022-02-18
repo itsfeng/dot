@@ -1,0 +1,50 @@
+[user]
+	name = Sven Eisenmann
+	email = sven.eisenmann@dm.de
+[core]
+	excludesFile = ~/.gitignore_global
+	pager = diff-so-fancy | less --tabs=4 -RFX
+	editor = nvim
+[commit]
+	template = /Users/d0292408/.stCommitMsg
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+# Comment: Start of "Extra Block"
+# Comment: This is to unlock VSCode as your git diff and git merge tool    
+[merge]
+    tool = vscode
+[mergetool "vscode"]
+    cmd = /usr/local/bin/code --wait $MERGED
+[diff]
+    tool = vscode
+[difftool "vscode"]
+    cmd = /usr/local/bin/code --wait --diff $LOCAL $REMOTE
+# Comment: End of "Extra Block"
+[fetch]
+	prune = true
+[color]
+	ui = true
+[color "diff-highlight"]
+	oldNormal = red bold
+	oldHighlight = red bold 52
+	newNormal = green bold
+	newHighlight = green bold 22
+[color "diff"]
+	meta = 11
+	frag = magenta bold
+	commit = yellow bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse
+[diff-so-fancy]
+	stripLeadingSymbols = false
+[pull]
+	ff = only
+[credential]
+	helper = 
+[credential]
+        helper = store --file ~/.config/git/git-credentials
+

@@ -1,0 +1,16 @@
+
+# ---------------------------------
+# Read Cert Info
+openssl x509 -text -noout -in certificate.crt 
+
+# ---------------------------------
+# Generate Cert CSR @ dmTECH
+openssl req -new -newkey rsa:2048 -nodes -out artifactory-prod.csr -keyout artifactory-prod.key -reqexts SAN -config <(cat /etc/pki/tls/openssl.cnf <(printf "[SAN]\nsubjectAltName=DNS:artifactory.dm-drogeriemarkt.com"))
+
+DE
+Baden-Wuerttemberg
+Karlsruhe
+dm-drogerie markt GmbH + Co. KG
+TECH-MEC-PDS
+artifactory.dm-drogeriemarkt.com
+techmecpds.demailbox@dm.de

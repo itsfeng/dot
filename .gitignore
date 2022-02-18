@@ -1,0 +1,24 @@
+# exclude everything
+.DS_Store
+lnx/.bV
+termux/.vim/*
+termux/.ssh/*
+macos/.config/alacritty/*
+macos/.config/tmux/*
+macos/.config/zsh/*
+macos/.jira.d/*
+nvim/.config/nvim/*
+ssh/.ssh/*
+lnx/.config/zsh/*
+
+# exception to the rule
+!macos/.ssh/config
+!nvim/.config/nvim/init.vim
+!macos/.config/zsh/.zshrc
+!macos/.config/zsh/.zprofile
+!macos/.config/alacritty/alacritty.yml
+!macos/.config/cheat/conf.yml
+!macos/.config/starship.toml
+!macos/.config/tmux/*
+!ssh/.ssh/config
+!lnx/.config/zsh/.zshrc

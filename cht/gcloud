@@ -1,0 +1,47 @@
+
+# ---------------------------------
+# list instances of a project
+gcloud compute instances list --project confluence[tab completion]
+
+# ---------------------------------
+# organize projects
+gcloud config configurations list
+
+# ---------------------------------
+# setup projects
+gcloud config configurations create rtf
+gcloud init
+
+# ---------------------------------
+# ssh add key to gcloud instance
+gcloud compute instances add-metadata pds-privatebin --metadata enable-oslogin=TRUE
+gcloud compute instances add-metadata pds-privatebin --metadata-from-file ssh-keys=/Users/d0292408/.ssh/id_dmtech.pub
+
+# ---------------------------------
+# get project ids
+gcloud resource-manager folders list --organization 135722408477
+gcloud resource-manager folders list --folder 837648433711
+
+# ---------------------------------
+# get stuff from bucket to gcp machine
+[link](https://stackoverflow.com/questions/55773739/how-to-attach-bucket-to-google-compute-engine-vm-on-startup)
+`
+#! /bin/bash
+toolbox --bind=/home/username/bucket-folder:/my-bucket <<< "gsutil cp -r /my-bucket/* gs://my-bucket"
+`
+# ---------------------------------
+# gcloud ci pipeline example
+`
+image: google/cloud-sdk:alpine
+deploy_production:
+  stage: deploy
+  environment: Production
+  only:
+  - master
+  script:
+  - echo $SERVICE_ACCOUNT &gt; /tmp/$CI_PIPELINE_ID.json
+  - gcloud auth activate-service-account --key-file /tmp/$CI_PIPELINE_ID.json
+  - gcloud --quiet --project $PROJECT_ID app deploy app.yaml dispatch.yaml
+after_script:
+- rm /tmp/$CI_PIPELINE_ID.json
+`
