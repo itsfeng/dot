@@ -1,4 +1,5 @@
 window:
+  opacity: 0.8
   # Blank space added around the window in pixels. This padding is scaled
   # by DPI and the specified value is always added at both opposing sides.
   padding:
@@ -25,7 +26,7 @@ font:
   bold_italic:
     family: Hack Nerd Font Mono
     style: Bold Italic
-  size: 13.5
+  size: 7
   use_thin_strokes: true
 
 # If `true`, bold text is drawn using the bright color variants.
@@ -66,7 +67,6 @@ bell:
   duration: 100
   color: '0x474747'
 
-background_opacity: 0.99
 selection:
   # This string contains all characters that are used as separators for
   # "semantic words" in Alacritty.

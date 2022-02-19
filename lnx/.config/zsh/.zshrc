@@ -116,6 +116,25 @@ alias rb='reboot now'
 alias dc='docker-compose'
 alias vim='nvim'
 
+#   Personal Aliases
+#   ------------------------------------------------------------
+alias v='nvim'
+alias vim='nvim'
+alias m='vifm'
+alias digq='dig -q'
+alias digx='dig -x'
+alias cht='() { cheat -c $1 | less -r ;}'
+
+#   Git
+#
+alias ga='git add'
+alias gaa='git add --all'
+alias gst='git status'
+alias gp='git push'
+alias gl='git pull'
+alias gcam="git commit -a -m"
+alias glog='git log --oneline --decorate --graph'
+
 #   ZSH
 #   ------------------------------------------------------------ 
 alias zshconfig='vim ~/.zshrc'
