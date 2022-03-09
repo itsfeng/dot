@@ -76,10 +76,9 @@ setopt incappendhistory  #Immediately append to the history file, not just when 
 #   Go configuration
 #   Preferred editor for local and remote sessions
 #   ------------------------------------------------------------
-export EDITOR='nvim'
-export GOPATH="$HOME/.go"
-export GOROOT="/usr/local/opt/go/libexec"
-export GOBIN="$GOPATH/bin"
+export EDITOR=nvim
+export GOPATH=$HOME/go
+export GOROOT=/opt/homebrew/opt/go/libexec
 
 #   Python foo
 #   ------------------------------------------------------------

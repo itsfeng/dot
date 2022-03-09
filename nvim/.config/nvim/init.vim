@@ -60,8 +60,12 @@ set number relativenumber            " Enable line numbers
 nnoremap <Leader>nu :set number! relativenumber!<CR>
 
 " Quickly insert an empty new line without entering insert mode
-    nnoremap <Leader>o o<Esc>0"_D
-    nnoremap <Leader>O O<Esc>0"_D
+nnoremap <Leader>o o<Esc>0"_D
+nnoremap <Leader>O O<Esc>0"_D
+
+" Insert whitespace in normal mode
+nnoremap ss i<space><esc>
+
 "-------------------------------------------------------------------------------
 " Colors & Formatting
 "-------------------------------------------------------------------------------

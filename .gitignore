@@ -10,6 +10,7 @@ macos/.jira.d/*
 nvim/.config/nvim/*
 ssh/.ssh/*
 lnx/.config/zsh/*
+macos/.config/vifm/vifminfo.json
 
 # exception to the rule
 !macos/.ssh/config

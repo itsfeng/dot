@@ -1,1 +1,2 @@
-motivate
+#motivate
+$HOME/bin/weebsay

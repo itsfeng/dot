@@ -15,18 +15,18 @@ scrolling:
 
 font:
   normal:
-    family: Hack Nerd Font Mono
+    family: Hack Nerd Font
     style: Regular
   bold:
-    family: Hack Nerd Font Mono
+    family: Hack Nerd Font
     style: Bold
   italic:
-    family: Hack Nerd Font Mono
+    family: Hack Nerd Font
     style: Italic
   bold_italic:
-    family: Hack Nerd Font Mono
+    family: Hack Nerd Font
     style: Bold Italic
-  size: 13.5
+  size: 14
   use_thin_strokes: true
 
 # If `true`, bold text is drawn using the bright color variants.
