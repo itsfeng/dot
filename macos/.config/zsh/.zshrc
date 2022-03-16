@@ -83,6 +83,7 @@ export GOROOT=/opt/homebrew/opt/go/libexec
 #   Python foo
 #   ------------------------------------------------------------
 alias py='python3'
+alias pip='pip3'
 
 #   Better less config
 #   ------------------------------------------------------------
@@ -181,6 +182,7 @@ fi
 #   ------------------------------------------------------------
 export AWS_PAGER=""
 export CLOUDSDK_PYTHON=/usr/local/bin/python3
+export CLOUDSDK_PYTHON_SITEPACKAGES=1
 
 
 #   The next line updates PATH for the Google Cloud SDK.
