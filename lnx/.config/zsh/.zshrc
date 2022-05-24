@@ -127,7 +127,7 @@ alias cht='() { cheat -c $1 | less -r ;}'
 alias tm='tmux new -As0'
 
 #   Git
-#
+#   ------------------------------------------------------------ 
 alias ga='git add'
 alias gaa='git add --all'
 alias gst='git status'
@@ -135,6 +135,11 @@ alias gp='git push'
 alias gl='git pull'
 alias gcam="git commit -a -m"
 alias glog='git log --oneline --decorate --graph'
+
+#   Docker
+#   ------------------------------------------------------------ 
+alias d='docker'
+alias dc='docker-compose'
 
 #   ZSH
 #   ------------------------------------------------------------ 
