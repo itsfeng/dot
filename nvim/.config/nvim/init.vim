@@ -98,6 +98,8 @@ set fileformats=unix,dos,mac
 set textwidth=80
 set colorcolumn=+1
 
+set nosmartindent
+set noautoindent
 
 set foldmethod=indent   
 set foldnestmax=10

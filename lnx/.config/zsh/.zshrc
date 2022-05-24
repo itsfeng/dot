@@ -45,7 +45,7 @@ ignition=${PROMPTS[$RANDOM % ${#RANDOM[*]}+1]}
 if [[ $EUID -ne 0 ]]; then
    PROMPT="%F{green}%m%f %F{yellow}%1~%f %F{green}$ignition%f "
 else
-   PROMPT="%F{red}%m%f %F{yellow}%1~%f %F{green}$ignition%f "
+   PROMPT="%K{yellow}##%K{default} %F{red}%m%f %F{yellow}%1~%f %F{green}$ignition%f "
 fi
 
 ## Git Settings
@@ -80,7 +80,7 @@ setopt incappendhistory
 #   Better less config
 #   ------------------------------------------------------------
 export LESS='--ignore-case --status-column --LONG-PROMPT --HILITE-UNREAD --tabs=4 -rR'
-export LESSOPEN="| src-hilite-lesspipe.sh %s"
+export LESSOPEN="| /usr/share/source-highlight/src-hilite-lesspipe.sh %s"
 # or the short version
 # export LESS='-F -i -J -M -R -W -x4 -X -z-4 -r'
 # Set colors for less. https://wiki.archlinux.org/index.php/Color_output_in_console#less .
@@ -94,10 +94,10 @@ export LESS_TERMCAP_ue=$'\E[0m'        # reset underline
 
 #   MAKE TERMINAL BETTER
 #   ------------------------------------------------------------
-#alias ll='exa --group-directories-first --git -lbF'
-#alias lo='exa --group-directories-first --git -labF'
-alias ll='ls -lh'
-alias lo='ls -alh'
+alias ll='exa --group-directories-first --git -lbF'
+alias lo='exa --group-directories-first --git -labF'
+#alias ll='ls -lh'
+#alias lo='ls -alh'
 alias cp='cp -iv'
 alias ..='cd ../'
 alias ..='cd ../'
@@ -124,6 +124,7 @@ alias m='vifm'
 alias digq='dig -q'
 alias digx='dig -x'
 alias cht='() { cheat -c $1 | less -r ;}'
+alias tm='tmux new -As0'
 
 #   Git
 #
